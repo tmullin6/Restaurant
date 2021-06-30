@@ -1,0 +1,1 @@
+Simple restaurant webpage created in javascript. Page is bundled with webpack and is dynamically created using javascript.
