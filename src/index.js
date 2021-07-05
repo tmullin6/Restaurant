@@ -1,24 +1,41 @@
-import renderContact from './contact';
-import renderMenu from './menu';
+import renderContact from './contact.js';
+import renderMenu from './menu.js';
 import './style.css';
-
-
-
-renderTitle();
-renderPage();
-
-
-function renderTitle() {
 
 const logo = document.createElement('div');
 const nav = document.createElement('div');
 const homeBtn = document.createElement('button');
 const menuBtn = document.createElement ('button');
 const contactBtn = document.createElement('button');
+const content = document.createElement('div');
+
+renderTitle();
+renderPage();
+
+homeBtn.addEventListener('click', ()=>{
+   clearPageContent();
+   renderPage();
+});
+
+menuBtn.addEventListener('click', ()=>{
+    clearPageContent();
+    content.appendChild(renderMenu());
+});
+
+contactBtn.addEventListener('click', ()=>{
+
+    clearPageContent();
+    content.appendChild(renderContact());
+});
+
+
+
+function renderTitle() {
+
 
 nav.classList.add("nav-bar");
 
-logo.textContent = "Nacho's Good Time Diner";
+logo.textContent = "Yuki's Dental Stick Cafe";
 logo.classList.add('logo');
 
 homeBtn.textContent = "Home";
@@ -36,15 +53,18 @@ nav.appendChild(homeBtn);
 nav.appendChild(menuBtn);
 nav.appendChild(contactBtn);
 
-
-homeBtn.addEventListener('click',renderPage);
-menuBtn.addEventListener('click', renderMenu);
-contactBtn.addEventListener('click', renderContact);
-
 };
 
 function renderPage (){
-    const content = document.createElement('div');
+    
     content.textContent= "This is the body of my restaurant page, It has info about this restaurant that totally does not exist";
+    content.classList.add("content");
     document.body.appendChild(content);
 };
+
+function clearPageContent() {
+
+    while(content.firstChild) {
+        content.removeChild(content.lastChild);
+    };
+}

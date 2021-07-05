@@ -1,15 +1,20 @@
 .logo {
+    height: 70px;
+    width: 60vw;
     font-size: 40px;
     text-align: center;
     padding-top: 20px;
+    background-color: rgb(150, 150, 150);
+    margin-left: 20vw;
 }
 
 .nav-bar {
     display: flex;
+    width: 75vw;
     justify-content: center;
     border: 2px solid black;
-    margin-top: 5vw;
     margin-bottom: 5vw;
+    margin-left: 12vw;
 }
 
 .nav-btns {
@@ -20,4 +25,12 @@
     margin: 25px 10px 25px 10px;
 
     
+}
+
+.content {
+    height: 100%;
+    width: 65vw;
+    margin-left: 12vw;
+    border: 1px solid black;
+    font-size: 40px;
 }
