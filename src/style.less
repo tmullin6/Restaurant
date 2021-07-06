@@ -1,6 +1,11 @@
+@width: 65vw;
+
+@height: auto+200px;
+
+
 .logo {
     height: 70px;
-    width: 60vw;
+    width: @width;
     font-size: 40px;
     text-align: center;
     padding-top: 20px;
@@ -10,7 +15,7 @@
 
 .nav-bar {
     display: flex;
-    width: 75vw;
+    width: @width;
     justify-content: center;
     border: 2px solid black;
     margin-bottom: 5vw;
@@ -21,15 +26,21 @@
     display: block;
     cursor: pointer;
     height: 45px;
-    width: 65px;
+    width: auto;
     margin: 25px 10px 25px 10px;
 
+    &:hover {
+        background-color: aqua;
+        height: 50px;
+        color: white;
+
+    }
     
 }
 
 .content {
-    height: 100%;
-    width: 65vw;
+    height: @height;
+    width: @width;
     margin-left: 12vw;
     border: 1px solid black;
     font-size: 40px;
