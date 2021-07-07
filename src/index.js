@@ -1,6 +1,6 @@
 import renderContact from './contact.js';
 import renderMenu from './menu.js';
-import './style.css';
+import './style.less';
 
 const logo = document.createElement('div');
 const nav = document.createElement('div');
