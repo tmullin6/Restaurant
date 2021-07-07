@@ -16,7 +16,7 @@
   \*********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nfunction renderMenu() {\n\n    const menu = document.createElement('p');\n    menu.textContent=\"Menu here\";\n\n    return menu;\n}\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (renderMenu);\n\n//# sourceURL=webpack://restaurant/./src/menu.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nfunction renderMenu() {\n\n    const menu = document.createElement('div');\n    const menuList = document.createElement('ul');\n    let menuItems = new Array(5);\n\n   for (let i =0; i<menuItems.length; i++){\n        menuItems[i]= document.createElement('li');\n        menuItems[i].classList.add('menu-item');\n        menuItems[i].textContent='Enter Item';\n        menuList.appendChild(menuItems[i]);\n    };\n    \n    menuList.classList.add('menu');\n    \n    menuItems[0].textContent = 'Hamburger';\n    menuItems[1].textContent = 'Cheeseburger';\n    menuItems[2].textContent = 'Chicken Sandwich';\n    menuItems[3].textContent = 'Hot Dog';\n    menuItems[4].textContent = 'French Fries';\n\n    menu.appendChild(menuList);\n    \n    return menu;\n}\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (renderMenu);\n\n//# sourceURL=webpack://restaurant/./src/menu.js?");
 
 /***/ })
 

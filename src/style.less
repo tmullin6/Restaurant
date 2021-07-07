@@ -1,7 +1,7 @@
 @width: 65vw;
-
-@height: auto+200px;
-
+@background: #f4f4f4;
+@fontSize: 40px;
+@fontFamily: 'Arial';
 
 .logo {
     height: 70px;
@@ -9,8 +9,8 @@
     font-size: 40px;
     text-align: center;
     padding-top: 20px;
-    background-color: rgb(150, 150, 150);
-    margin-left: 20vw;
+    background-color: @background;
+    margin-left: 12vw;
 }
 
 .nav-bar {
@@ -20,28 +20,42 @@
     border: 2px solid black;
     margin-bottom: 5vw;
     margin-left: 12vw;
-}
 
-.nav-btns {
-    display: block;
-    cursor: pointer;
-    height: 45px;
-    width: auto;
-    margin: 25px 10px 25px 10px;
-
-    &:hover {
-        background-color: aqua;
-        height: 50px;
-        color: white;
-
-    }
+    .nav-btns {
+        display: block;
+        cursor: pointer;
+        height: 45px;
+        width: auto;
+        background-color: @background;
+        margin: 25px 10px 25px 10px;
     
+        &:hover {
+            background-color: darken(@background,20%);
+            height: 50px;
+            color: white;
+    
+        }
+        
+    }
 }
+
+
 
 .content {
-    height: @height;
+    height: 100%;
     width: @width;
     margin-left: 12vw;
     border: 1px solid black;
-    font-size: 40px;
+    font-size: @fontSize;
+}
+.menu {
+    list-style: none;
+    background-color: @background;
+    .menu-item {
+        font-size: @fontSize;
+        font-family: @fontFamily;
+        padding: 15px;
+
+        
+    }
 }
