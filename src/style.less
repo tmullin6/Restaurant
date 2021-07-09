@@ -1,37 +1,66 @@
 @width: 65vw;
-@background: #f4f4f4;
+@fontColor: white;
 @fontSize: 40px;
 @fontFamily: 'Arial';
+@titleBackground: black;
+
+body {
+    background-color: #BC6C25;
+}
+
+
+.title-area {
+    width: 100%;
+    opacity: 0.80;
+    background-color:@titleBackground;
+    font-family: @fontFamily;
+    color: @fontColor;
+}
+
+.title {
+    display: flex;
+    justify-content: space-between;
+    .title-area();
+    margin-bottom: 0;
+    font-size: @fontSize;
+    padding: 10px 0px 10px 0px;
+
+}
 
 .logo {
-    height: 70px;
-    width: @width;
+    display: flex;
+    width: 50vw;
+    color: @fontColor;
+    font-weight: 800;
+    text-shadow: 2px 2px black;
     font-size: 40px;
+    margin-left: 20px;
     text-align: center;
-    padding-top: 20px;
-    background-color: @background;
-    margin-left: 12vw;
+
+    &:hover {
+        cursor: pointer;
+    }
 }
 
 .nav-bar {
     display: flex;
-    width: @width;
-    justify-content: center;
-    border: 2px solid black;
-    margin-bottom: 5vw;
-    margin-left: 12vw;
+    width: 100%;
+    justify-content: flex-end;
+    align-items: flex-end;
 
     .nav-btns {
         display: block;
         cursor: pointer;
-        height: 45px;
+        font-size: 20px;
+        color: white;
+        height: 40px;
         width: auto;
-        background-color: @background;
-        margin: 25px 10px 25px 10px;
+        margin: 0px 5px 0px 7px;
+        background-color:#606C38;
     
         &:hover {
-            background-color: darken(@background,20%);
-            height: 50px;
+        
+            background-color: darken(#606C38,15%);
             color: white;
     
         }
@@ -39,18 +68,66 @@
     }
 }
 
+.hours {
+
+    .title-area();
+
+    height: fit-content;
+  
+    
+    color: white;
+    margin-top: 0;
+    margin-bottom: 20px;
+  
+    font-size: 28px;
+    color: @fontColor;
+    font-weight: 800;
+    text-shadow: 2px 2px black;
+
+}
+
+.hours-text {
+    margin-top: 0;
+    padding-left: 25px;
+}
 
 
 .content {
-    height: 100%;
+    height: 35vw;
     width: @width;
-    margin-left: 12vw;
-    border: 1px solid black;
-    font-size: @fontSize;
+    opacity: 0.75;
+    background-color: #283618;
+    color: @fontColor;
+    font-family: @fontFamily;
+    padding: 0px 10px 0px 10px;
+    line-height: 2;
+    margin-left: 15vw;
+    box-shadow: 2px 2px black;
+    font-size: 24px;
 }
+
+.page-text {
+    font-family: @fontFamily;
+    padding: 0px 10px 0px 10px;
+    font-size: 24px;
+
+}
+.coffee-img {
+background-color:lighten(#fefae0,20%);
+width: fit-content;
+margin-left: 35%;
+margin-top: 5%;
+border-radius: 9px;
+    .coffee-icon {
+    height: 200px;
+    width: 250px;
+    margin-left: auto;
+    margin-right: auto;
+    }
+}
+
 .menu {
     list-style: none;
-    background-color: @background;
     .menu-item {
         font-size: @fontSize;
         font-family: @fontFamily;
