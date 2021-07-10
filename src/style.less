@@ -1,14 +1,18 @@
+//LESS Variables
 @width: 65vw;
 @fontColor: white;
 @fontSize: 40px;
 @fontFamily: 'Arial';
 @titleBackground: black;
+@fontShadow: 2px 2px black, 2px 2px black, 2px 2px black, 2px 2px black;
+
 
 body {
     background-color: #BC6C25;
 }
 
 
+//Styles for the top nav bar
 .title-area {
     width: 100%;
     opacity: 0.80;
@@ -59,41 +63,35 @@ body {
         background-color:#606C38;
     
         &:hover {
-        
             background-color: darken(#606C38,15%);
             color: white;
     
-        }
-        
+        }  
     }
 }
 
 .hours {
-
     .title-area();
 
     height: fit-content;
-  
-    
     color: white;
     margin-top: 0;
     margin-bottom: 20px;
-  
     font-size: 28px;
     color: @fontColor;
     font-weight: 800;
     text-shadow: 2px 2px black;
 
+    .hours-text {
+        margin-top: 0;
+        padding-left: 25px;
+    }
+
 }
 
-.hours-text {
-    margin-top: 0;
-    padding-left: 25px;
-}
-
-
+//Styles for the Home page content
 .content {
-    height: 35vw;
+    height: 38vw;
     width: @width;
     opacity: 0.75;
     background-color: #283618;
@@ -104,35 +102,53 @@ body {
     margin-left: 15vw;
     box-shadow: 2px 2px black;
     font-size: 24px;
-}
 
-.page-text {
-    font-family: @fontFamily;
-    padding: 0px 10px 0px 10px;
-    font-size: 24px;
-
-}
-.coffee-img {
-background-color:lighten(#fefae0,20%);
-width: fit-content;
-margin-left: 35%;
-margin-top: 5%;
-border-radius: 9px;
-    .coffee-icon {
-    height: 200px;
-    width: 250px;
-    margin-left: auto;
-    margin-right: auto;
-    }
-}
-
-.menu {
-    list-style: none;
-    .menu-item {
-        font-size: @fontSize;
+    .page-text {
         font-family: @fontFamily;
-        padding: 15px;
-
-        
+        padding: 0px 10px 0px 10px;
+        font-size: 24px;
+        text-shadow: @fontShadow;
     }
+
+    .coffee-img {
+        background-color:lighten(#fefae0,20%);
+        width: fit-content;
+        margin-left: 35%;
+        margin-top: 8%;
+        border-radius: 9px;
+            .coffee-icon {
+            height: 200px;
+            width: 250px;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 20px;
+            }
+        }
+}
+
+
+//Styles for the menu page content
+.menu {
+    display: flex;
+    justify-content: space-between;
+    .menu-list {
+        list-style: none;
+    }
+    .menu-item {
+        .content .page-text();
+
+        font-weight: 700;
+    }    
+}
+
+//Styles for the contact page content
+
+.contact-headers{
+    font-size: @fontSize;
+    font-family: @fontFamily;
+    text-shadow: @fontShadow;
+}
+
+.contact-text {
+    .content .page-text();
 }

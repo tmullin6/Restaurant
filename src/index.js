@@ -3,6 +3,8 @@ import renderMenu from './menu.js';
 import './style.less';
 import HappyCoffee from './HappyCoffee.png';
 
+
+//Global DOM Elements
 const title = document.createElement('div');
 const logo = document.createElement('div');
 const navbar = document.createElement("div");
@@ -15,15 +17,15 @@ const content = document.createElement('div');
 
 
 
-
+//Initial home page load. Renders the contents of the navbar as well as the home page contents 
 renderTitle();
 renderPage();
 
 
+//Event listeners to control the page navigation from the navbar
 logo.addEventListener('click', ()=>{
     clearPageContent();
     renderPage();
-
 });
 
 homeBtn.addEventListener('click', ()=>{
@@ -43,7 +45,7 @@ contactBtn.addEventListener('click', ()=>{
 });
 
 
-
+//Function to render top of the page
 function renderTitle() {
 
 
@@ -76,6 +78,7 @@ hours.appendChild(hoursText);
 
 };
 
+//Function to render the contents of the main page
 function renderPage (){
     const text = document.createElement('p');
     text.textContent= "Yuki's cafe is a chill, laid back spot to enjoy a cup of coffee, grab a pastry, and relax with friends and family. Come check us out sometime! Of course this site is completely made up and this cafe does not exist, so good luck actually finding us. Go to our contact page to \"get in touch\".";
@@ -93,6 +96,7 @@ function renderPage (){
     iconDiv.appendChild(icon);
 };
 
+//Function to clear the contents of a page in order to load the users desired page
 function clearPageContent() {
 
     while(content.firstChild) {
