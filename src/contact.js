@@ -1,6 +1,7 @@
 
 function renderContact() {
 
+    //Create DOM Elements for the contact page
     const contact = document.createElement('div');
     const addressHead = document.createElement('h3');
     const addressText = document.createElement('p');
